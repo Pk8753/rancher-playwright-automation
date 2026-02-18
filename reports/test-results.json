@@ -1,0 +1,409 @@
+{
+  "config": {
+    "configFile": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/playwright.config.js",
+    "rootDir": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "*.spec.js"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "reports/test-results.json"
+        }
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "playwright-report"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.58.2",
+    "workers": 6,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "localCluster.spec.js",
+      "file": "localCluster.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Local Cluster Validation",
+          "file": "localCluster.spec.js",
+          "line": 6,
+          "column": 15,
+          "specs": [
+            {
+              "title": "Validate Local Cluster Dashboard",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2266,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at https://localhost:8443/\nCall log:\n\u001b[2m  - navigating to \"https://localhost:8443/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at https://localhost:8443/\nCall log:\n\u001b[2m  - navigating to \"https://localhost:8443/\", waiting until \"domcontentloaded\"\u001b[22m\n\n    at LoginPage.navigate (/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/pages/login.page.js:16:21)\n    at /Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/tests/localCluster.spec.js:13:21",
+                        "location": {
+                          "file": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/pages/login.page.js",
+                          "column": 21,
+                          "line": 16
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/login.page.js:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   \u001b[36masync\u001b[39m navigate(baseURL) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(baseURL\u001b[33m,\u001b[39m { waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   \u001b[36masync\u001b[39m validateLoginPageLoaded() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/pages/login.page.js",
+                            "column": 21,
+                            "line": 16
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at https://localhost:8443/\nCall log:\n\u001b[2m  - navigating to \"https://localhost:8443/\", waiting until \"domcontentloaded\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pages/login.page.js:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   \u001b[36masync\u001b[39m navigate(baseURL) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(baseURL\u001b[33m,\u001b[39m { waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   \u001b[36masync\u001b[39m validateLoginPageLoaded() {\u001b[0m\n\u001b[2m    at LoginPage.navigate (/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/pages/login.page.js:16:21)\u001b[22m\n\u001b[2m    at /Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/tests/localCluster.spec.js:13:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-18T05:39:39.134Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/test-results/localCluster-Local-Cluster-e3782-ate-Local-Cluster-Dashboard-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/test-results/localCluster-Local-Cluster-e3782-ate-Local-Cluster-Dashboard-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/test-results/localCluster-Local-Cluster-e3782-ate-Local-Cluster-Dashboard-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/pages/login.page.js",
+                        "column": 21,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4a796d37d6480c354fb5-01a1b5277c52a879266c",
+              "file": "localCluster.spec.js",
+              "line": 7,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "rancher.spec.js",
+      "file": "rancher.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Rancher Smoke Tests",
+          "file": "rancher.spec.js",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Launch Rancher URL successfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 2291,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at https://localhost:8443/\nCall log:\n\u001b[2m  - navigating to \"https://localhost:8443/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at https://localhost:8443/\nCall log:\n\u001b[2m  - navigating to \"https://localhost:8443/\", waiting until \"domcontentloaded\"\u001b[22m\n\n    at /Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/tests/rancher.spec.js:8:16",
+                        "location": {
+                          "file": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/tests/rancher.spec.js",
+                          "column": 16,
+                          "line": 8
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  6 |\u001b[39m\n \u001b[90m  7 |\u001b[39m   test(\u001b[32m'Launch Rancher URL successfully'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page\u001b[33m,\u001b[39m baseURL }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(baseURL\u001b[33m,\u001b[39m { waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m1500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/dashboard/i\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/tests/rancher.spec.js",
+                            "column": 16,
+                            "line": 8
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at https://localhost:8443/\nCall log:\n\u001b[2m  - navigating to \"https://localhost:8443/\", waiting until \"domcontentloaded\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  6 |\u001b[39m\n \u001b[90m  7 |\u001b[39m   test(\u001b[32m'Launch Rancher URL successfully'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page\u001b[33m,\u001b[39m baseURL }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(baseURL\u001b[33m,\u001b[39m { waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m1500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/dashboard/i\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/tests/rancher.spec.js:8:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-18T05:39:39.155Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/test-results/rancher-Rancher-Smoke-Tests-Launch-Rancher-URL-successfully-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/test-results/rancher-Rancher-Smoke-Tests-Launch-Rancher-URL-successfully-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/test-results/rancher-Rancher-Smoke-Tests-Launch-Rancher-URL-successfully-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/tests/rancher.spec.js",
+                        "column": 16,
+                        "line": 8
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4b4809e0631026381d64-3c81650d343bb9cbd155",
+              "file": "rancher.spec.js",
+              "line": 7,
+              "column": 3
+            },
+            {
+              "title": "Login successfully with valid credentials",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1860,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at https://localhost:8443/\nCall log:\n\u001b[2m  - navigating to \"https://localhost:8443/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at https://localhost:8443/\nCall log:\n\u001b[2m  - navigating to \"https://localhost:8443/\", waiting until \"domcontentloaded\"\u001b[22m\n\n    at LoginPage.navigate (/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/pages/login.page.js:16:21)\n    at /Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/tests/rancher.spec.js:22:21",
+                        "location": {
+                          "file": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/pages/login.page.js",
+                          "column": 21,
+                          "line": 16
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/login.page.js:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   \u001b[36masync\u001b[39m navigate(baseURL) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(baseURL\u001b[33m,\u001b[39m { waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   \u001b[36masync\u001b[39m validateLoginPageLoaded() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/pages/login.page.js",
+                            "column": 21,
+                            "line": 16
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at https://localhost:8443/\nCall log:\n\u001b[2m  - navigating to \"https://localhost:8443/\", waiting until \"domcontentloaded\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pages/login.page.js:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   \u001b[36masync\u001b[39m navigate(baseURL) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(baseURL\u001b[33m,\u001b[39m { waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   \u001b[36masync\u001b[39m validateLoginPageLoaded() {\u001b[0m\n\u001b[2m    at LoginPage.navigate (/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/pages/login.page.js:16:21)\u001b[22m\n\u001b[2m    at /Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/tests/rancher.spec.js:22:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-18T05:39:44.257Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/test-results/rancher-Rancher-Smoke-Test-386d3-ully-with-valid-credentials-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/test-results/rancher-Rancher-Smoke-Test-386d3-ully-with-valid-credentials-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/test-results/rancher-Rancher-Smoke-Test-386d3-ully-with-valid-credentials-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/pages/login.page.js",
+                        "column": 21,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4b4809e0631026381d64-7c2608f9faf3f91310ef",
+              "file": "rancher.spec.js",
+              "line": 18,
+              "column": 3
+            },
+            {
+              "title": "Login fails with invalid credentials",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1848,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at https://localhost:8443/\nCall log:\n\u001b[2m  - navigating to \"https://localhost:8443/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at https://localhost:8443/\nCall log:\n\u001b[2m  - navigating to \"https://localhost:8443/\", waiting until \"domcontentloaded\"\u001b[22m\n\n    at LoginPage.navigate (/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/pages/login.page.js:16:21)\n    at /Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/tests/rancher.spec.js:39:21",
+                        "location": {
+                          "file": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/pages/login.page.js",
+                          "column": 21,
+                          "line": 16
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/login.page.js:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   \u001b[36masync\u001b[39m navigate(baseURL) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(baseURL\u001b[33m,\u001b[39m { waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   \u001b[36masync\u001b[39m validateLoginPageLoaded() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/pages/login.page.js",
+                            "column": 21,
+                            "line": 16
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at https://localhost:8443/\nCall log:\n\u001b[2m  - navigating to \"https://localhost:8443/\", waiting until \"domcontentloaded\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pages/login.page.js:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   \u001b[36masync\u001b[39m navigate(baseURL) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(baseURL\u001b[33m,\u001b[39m { waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   \u001b[36masync\u001b[39m validateLoginPageLoaded() {\u001b[0m\n\u001b[2m    at LoginPage.navigate (/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/pages/login.page.js:16:21)\u001b[22m\n\u001b[2m    at /Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/tests/rancher.spec.js:39:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-18T05:39:48.116Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/test-results/rancher-Rancher-Smoke-Test-ff41e-ls-with-invalid-credentials-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/test-results/rancher-Rancher-Smoke-Test-ff41e-ls-with-invalid-credentials-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/test-results/rancher-Rancher-Smoke-Test-ff41e-ls-with-invalid-credentials-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/pankaj/Desktop/rancher-mcp-playwright-automation/rancher-playwright-automation/pages/login.page.js",
+                        "column": 21,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4b4809e0631026381d64-fd9535e56a6505966fe7",
+              "file": "rancher.spec.js",
+              "line": 36,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-02-18T05:39:37.975Z",
+    "duration": 12899.72,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}
