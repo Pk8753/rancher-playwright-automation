@@ -31,7 +31,7 @@ The tests are written in **JavaScript**, using Playwright test framework with mo
 
 Below is a demo of the Rancher Playwright Automation in action:
 
-<video src="rancher-playwright-automation/demo/Demo.mov" controls width="600" autoplay loop muted>
+<video src="./demo/Demo.mov" controls width="600" autoplay loop muted>
 Your browser does not support the video tag.
 </video>
 
